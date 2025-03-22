@@ -6,7 +6,7 @@ export const WelcomeComponent = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-2xl font-bold">Счётчик: {count}</h1>
+      <h1 className="text-2xl font-bold">Counter: {count}</h1>
       <div className="flex flex-row gap-2">
         <button
           onClick={increment}
