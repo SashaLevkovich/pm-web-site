@@ -1,13 +1,13 @@
-import { create, type StoreApi } from "zustand";
+import { create, type StoreApi } from 'zustand'
 
 interface StoreState {
-  count: number;
-  increment: () => void;
-  decrement: () => void;
+  count: number
+  increment: () => void
+  decrement: () => void
 }
 
-export const useStore = create<StoreState>(set => ({
+export const useStore = create<StoreState>((set) => ({
   count: 0,
-  increment: () => set(state => ({ count: state.count + 1 })),
-  decrement: () => set(state => ({ count: state.count - 1 })),
-}));
+  increment: () => set((state) => ({ count: state.count + 1 })),
+  decrement: () => set((state) => ({ count: state.count - 1 })),
+}))
