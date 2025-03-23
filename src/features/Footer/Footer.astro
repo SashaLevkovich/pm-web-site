@@ -1,0 +1,19 @@
+---
+import { LogoComponent } from 'components/LogoComponent'
+const currentYear = new Date().getFullYear()
+---
+
+<footer
+  class="bg-dark-brand flex flex-col items-center gap-[32px] py-[25px] px-[16px]"
+>
+  <LogoComponent />
+
+  <a href="tel:+375296487948">
+    <span class="text-light text-[16px]">+375 (29) 648-79-48</span>
+  </a>
+
+  <p class="flex flex-col items-center gap-[1px] text-light text-[8px]">
+    <span class="font-bold">УНПК: KA3462472</span>
+    <span class="font-bold">©Подрамники Минск {currentYear}</span>
+  </p>
+</footer>
