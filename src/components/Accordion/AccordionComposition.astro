@@ -1,0 +1,19 @@
+---
+import AccordionComponent, {
+  type AccordionComponentProps,
+} from './Accordion.astro'
+
+export interface AccordionCompositionComponentProps {
+  data: AccordionComponentProps[]
+}
+
+const { data } = Astro.props
+---
+
+<div>
+  {
+    data.map((item: AccordionComponentProps) => (
+      <AccordionComponent {...item} />
+    ))
+  }
+</div>
