@@ -1,12 +1,13 @@
 ---
-import { LogoComponent } from 'components/LogoComponent'
+import Logo from 'components/Logo/Logo.astro'
+
 const currentYear = new Date().getFullYear()
 ---
 
 <footer
   class="bg-dark-brand flex flex-col items-center gap-[32px] py-[25px] px-[16px]"
 >
-  <LogoComponent />
+  <Logo />
 
   <a href="tel:+375296487948">
     <span class="text-light text-[16px]">+375 (29) 648-79-48</span>

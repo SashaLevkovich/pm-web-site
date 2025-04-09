@@ -1,0 +1,20 @@
+---
+import arrow from 'assets/icons/arrow.svg'
+
+export interface AccordionComponentProps {
+  title: string
+  content: string
+}
+
+const { title, content } = Astro.props
+---
+
+<details class="mb-4 group border-b-2 border-dark-tree pb-[20px] last:border-0">
+  <summary
+    class="flex items-center justify-between cursor-pointer text-xl text-tree list-none font-medium"
+  >
+    {title}
+    <img src={arrow.src} class="group-open:rotate-180" alt="Открыть описание" />
+  </summary>
+  <div class="mt-2 text-base text-dark-tree text-[14px]">{content}</div>
+</details>
