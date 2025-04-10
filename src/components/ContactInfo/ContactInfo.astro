@@ -1,0 +1,50 @@
+---
+import { PHONE_NUMBER } from 'shared/constants'
+import { formatPhoneNumber } from 'shared/helpers/formatPhoneNumber'
+import instagramIcon from 'assets/icons/instagram.svg'
+import telegramIcon from 'assets/icons/telegram.svg'
+import viberIcon from 'assets/icons/viber.svg'
+import vkIcon from 'assets/icons/vk.svg'
+---
+
+<section
+  class="w-full pt-[30px] pb-[55px] bg-brand flex flex-col items-center justify-center"
+>
+  <h2
+    class="text-light font-bold uppercase text-[20px] mb-[25px] leading-[130%] tracking-[3%]"
+  >
+    Контактная информация
+  </h2>
+  <div class="w-[105px] h-[6px] bg-light mb-[50px]"></div>
+
+  <div class="flex flex-col items-center justify-center gap-[7px] mb-[25px]">
+    <span class="text-light font-semibold text-[16px]">телефон:</span>
+    <a
+      href=`tel:${PHONE_NUMBER}`
+      class="text-light font-semibold text-[16px] leading-[130%] tracking-[3%]"
+      >{formatPhoneNumber(PHONE_NUMBER)}</a
+    >
+  </div>
+
+  <div class="flex flex-col items-center justify-center gap-[20px]">
+    <span class="text-light font-semibold text-[16px]"
+      >социальные сети и мессенджеры:</span
+    >
+
+    <div class="flex items-center gap-[24px]">
+      <a target="_blank" href="https://www.instagram.com/podramniki.minsk/"
+        ><img src={instagramIcon.src} alt="Связаться через instagram" /></a
+      >
+      <a target="_blank" href="https://t.me/lvkvch_alex"
+        ><img src={telegramIcon.src} alt="Связаться через telegram" /></a
+      >
+      <!-- TODO add link for viber -->
+      <a target="_blank" href=""
+        ><img src={viberIcon.src} alt="Связаться через viber" /></a
+      >
+      <a target="_blank" href="https://m.vk.com/podramnikiminsk">
+        <img src={vkIcon.src} alt="Связаться через вконтакте" />
+      </a>
+    </div>
+  </div>
+</section>
