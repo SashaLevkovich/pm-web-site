@@ -2,6 +2,7 @@
 import Logo from 'components/Logo/Logo.astro'
 
 import phoneIcon from 'assets/icons/phone.svg'
+import { PHONE_NUMBER } from 'shared/constants'
 ---
 
 <header
@@ -10,7 +11,7 @@ import phoneIcon from 'assets/icons/phone.svg'
   <Logo />
 
   <a
-    href="tel:+375296487948"
+    href=`tel:${PHONE_NUMBER}`
     class="bg-light rounded-full p-2 h-[42px] w-[42px] flex items-center justify-center"
   >
     <img src={phoneIcon.src} alt="Позвонить :)" />

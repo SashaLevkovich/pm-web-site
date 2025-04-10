@@ -5,6 +5,8 @@ import Footer from 'features/Footer/Footer.astro'
 import Preview from 'components/Preview/Preview.astro'
 import AccordionCompositionComponent from 'components/Accordion/AccordionComposition.astro'
 import { ACCORDION_OPTIONS } from './constants'
+import ContactInfo from 'components/ContactInfo/ContactInfo.astro'
+import { PhotoSliderComponent } from 'components/PhotoSliderComponent'
 ---
 
 <Layout>
@@ -15,6 +17,8 @@ import { ACCORDION_OPTIONS } from './constants'
   >
     <Preview />
 
+    <PhotoSliderComponent client:load />
+
     <div class="flex items-center justify-center">
       <p class="max-w-[360px] text-center">
         <strong class="text-tree">Подрамники Минск</strong> —— это мастерская по
@@ -24,6 +28,7 @@ import { ACCORDION_OPTIONS } from './constants'
 
     <AccordionCompositionComponent data={ACCORDION_OPTIONS} />
   </main>
+  <ContactInfo />
 </Layout>
 
 <Footer />
